@@ -7,6 +7,7 @@ $color-purgio: #015152;
 $color-twks: #BF3C44;
 $color-converse: #000;
 $color-seouledu: #0362CC;
+$color-yellow: #ffcd50;
 
 @mixin flex-c {
     display: flex;
@@ -46,7 +47,10 @@ header {
         position: relative;
         padding-left: 40px;
         color: $color-white;
-        &:hover { &::after { width: 60px;}}
+        &:hover { 
+            color: $color-yellow;
+            &::after { width: 60px;}
+        }
         &::after {
             display: block;
             content: '';
@@ -59,6 +63,7 @@ header {
         &.ch-barbg { 
             color: $color-black;
             text-shadow: 0 0 4px #fff;
+            &:hover { color: $color-yellow;}
             &::after {background-color: $color-black;}
         }
     }
@@ -90,8 +95,7 @@ main { position: relative;}
                 transform: translateY(50%);
                 opacity: 0;
                 transition: 0.7s;
-                //color: transparent;
-                //-webkit-text-stroke: 1px #fff;
+                &:first-child { color: $color-yellow; }
                 &.up { transform: translateY(0); opacity: 1;}
             }
         }

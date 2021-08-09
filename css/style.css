@@ -51,6 +51,10 @@ header.inner {
   color: #fff;
 }
 
+.nav li:hover {
+  color: #ffcd50;
+}
+
 .nav li:hover::after {
   width: 60px;
 }
@@ -71,6 +75,10 @@ header.inner {
 .nav li.ch-barbg {
   color: #222;
   text-shadow: 0 0 4px #fff;
+}
+
+.nav li.ch-barbg:hover {
+  color: #ffcd50;
 }
 
 .nav li.ch-barbg::after {
@@ -135,6 +143,10 @@ main {
   opacity: 0;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+.article__header div h2 p:first-child {
+  color: #ffcd50;
 }
 
 .article__header div h2 p.up {

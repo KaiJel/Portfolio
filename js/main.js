@@ -25,7 +25,7 @@ $(function(){
         }, 800);
     });
     $('.nav li:nth-child(3)').click(function () {
-        let top1 = $('.portfolio').offset().top;
+        let top1 = $('.portfolio').offset().top + 200;
         $('html, body').animate({
             scrollTop: top1
         }, 800);
