@@ -15,7 +15,7 @@
 <body>
     <header class="inner">
         <nav>
-            <ul>
+            <ul class="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Porfolio</a></li>
@@ -24,14 +24,16 @@
     </header>
     <main>
         <article class="home">
-            <video src="mov/Laptop - 4731.mp4" loop muted></video>
-            <div class="tiping">I'm Min!</div>
+            <video src="mov/Laptop - 4731.mp4" loop autoplay muted></video>
+            <div class="tiping"></div>
         </article>
-        <article class="article__header tit01 inner">
-            <h2>
-                <p>About:</p>
-                <p>What can do?</p>
-            </h2>
+        <article class="article__header tit01">
+            <div class="inner">
+                <h2>
+                    <p>About:</p>
+                    <p>What can do?</p>
+                </h2>
+            </div>
         </article>
         <article class="about inner">
             <ul>
@@ -69,101 +71,105 @@
                 </li>
             </ul>
         </article>
-        <article class="article__header tit02 inner">
-            <h2>
-                <p>Portfolio:</p>
-                <p>What did make?</p>
-            </h2>
+        <article class="article__header tit02">
+            <div class="inner">
+                <h2>
+                    <p>Portfolio:</p>
+                    <p>What did make?</p>
+                </h2>
+            </div>
         </article>
-        <article class="portfolio inner">
-            <div class="laptop">
-                <img src="imgs/laptop_block.png" alt="이미지">
-                <ul class="laptop__change">
-                    <li class="purgio">
-                        <div><img src="imgs/purgio.jpg" alt="이미지"></div>
-                        <div class="explan">
-                            <h3>푸르지오</h3>
-                            <div class="explan__box">
-                                <p><span>원페이지 스크롤</span></p>
-                                <p>
-                                    <span>퍼블리싱100%</span>
-                                    <span>메인페이지</span>
-                                </p>
-                                <p>상세내용 블라블라블ㅗ ㅏ</p>
+        <article class="portfolio">
+            <div class="inner">
+                <div class="laptop">
+                    <img src="imgs/laptop_block.png" alt="이미지">
+                    <ul class="laptop__change">
+                        <li class="purgio">
+                            <div><img src="imgs/purgio.jpg" alt="이미지"></div>
+                            <div class="explan">
+                                <h3>푸르지오</h3>
+                                <div class="explan__box">
+                                    <p><span>원페이지 스크롤</span></p>
+                                    <p>
+                                        <span>퍼블리싱100%</span>
+                                        <span>메인페이지</span>
+                                    </p>
+                                    <p>상세내용 블라블라블ㅗ ㅏ</p>
+                                </div>
+                                <div class="site-link"><a href="https://kaijel.github.io/Prugio/" target="_blank">View Detail</a></div>
                             </div>
-                            <div class="site-link"><a href="https://kaijel.github.io/Prugio/" target="_blank">View Detail</a></div>
-                        </div>
+                        </li>
+                        <li class="twks">
+                            <div><img src="imgs/twks.jpg" alt="이미지"></div>
+                            <div class="explan">
+                                <h3>TWKS</h3>
+                                <div class="explan__box">
+                                    <p>
+                                        <span>자유스크롤</span>
+                                        <span>반응형</span>
+                                    </p>
+                                    <p>
+                                        <span>퍼블리싱100%</span>
+                                        <span>메인페이지</span>
+                                    </p>
+                                    <p>상세내용 블라블라블ㅗ ㅏ</p>
+                                </div>
+                                <div class="site-link"><a href="https://kaijel.github.io/TWKS/" target="_blank">View Detail</a></div>
+                            </div>
+                        </li>
+                        <li class="converse">
+                            <div><img src="imgs/converse.jpg" alt="이미지"></div>
+                            <div class="explan">
+                                <h3>Converse</h3>
+                                <div class="explan__box">
+                                    <p>반응형</p>
+                                    <p>
+                                        <span>퍼블리싱100%</span>
+                                        <span>메인페이지</span>
+                                    </p>
+                                    <p>상세내용 블라블라블ㅗ ㅏ</p>
+                                </div>
+                                <div class="site-link"><a href="https://kaijel.github.io/Converse/" target="_blank">View Detail</a></div>
+                            </div>
+                        </li>
+                        <li class="seouledu">
+                            <div><img src="imgs/seoul.jpg" alt="이미지"></div>
+                            <div class="explan">
+                                <h3>서울교육청</h3>
+                                <div class="explan__box">
+                                    <p>반응형</p>
+                                    <p>
+                                        <span>퍼블리싱100%</span>
+                                        <span>메인+서브페이지1</span>
+                                    </p>
+                                    <p>상세내용 블라블라블ㅗ ㅏ</p>
+                                </div>
+                                <div class="site-link"><a href="https://kaijel.github.io/Seoul/" target="_blank">View Detail</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="portfolio__nav">
+                    <li>
+                        <img src="imgs/purgio_s.jpg" alt="이미지">
+                        <div>푸르지오</div>
                     </li>
-                    <li class="twks">
-                        <div><img src="imgs/twks.jpg" alt="이미지"></div>
-                        <div class="explan">
-                            <h3>TWKS</h3>
-                            <div class="explan__box">
-                                <p>
-                                    <span>자유스크롤</span>
-                                    <span>반응형</span>
-                                </p>
-                                <p>
-                                    <span>퍼블리싱100%</span>
-                                    <span>메인페이지</span>
-                                </p>
-                                <p>상세내용 블라블라블ㅗ ㅏ</p>
-                            </div>
-                            <div class="site-link"><a href="https://kaijel.github.io/TWKS/" target="_blank">View Detail</a></div>
-                        </div>
+                    <li>
+                        <img src="imgs/twks_s.jpg" alt="이미지">
+                        <div>TWKS</div>
                     </li>
-                    <li class="converse">
-                        <div><img src="imgs/converse.jpg" alt="이미지"></div>
-                        <div class="explan">
-                            <h3>Converse</h3>
-                            <div class="explan__box">
-                                <p>반응형</p>
-                                <p>
-                                    <span>퍼블리싱100%</span>
-                                    <span>메인페이지</span>
-                                </p>
-                                <p>상세내용 블라블라블ㅗ ㅏ</p>
-                            </div>
-                            <div class="site-link"><a href="https://kaijel.github.io/Converse/" target="_blank">View Detail</a></div>
-                        </div>
+                    <li>
+                        <img src="imgs/converse_s.jpg" alt="이미지">
+                        <div>Converse</div>
                     </li>
-                    <li class="seouledu">
-                        <div><img src="imgs/seoul.jpg" alt="이미지"></div>
-                        <div class="explan">
-                            <h3>서울교육청</h3>
-                            <div class="explan__box">
-                                <p>반응형</p>
-                                <p>
-                                    <span>퍼블리싱100%</span>
-                                    <span>메인페이지+서브페이지1</span>
-                                </p>
-                                <p>상세내용 블라블라블ㅗ ㅏ</p>
-                            </div>
-                            <div class="site-link"><a href="https://kaijel.github.io/Seoul/" target="_blank">View Detail</a></div>
-                        </div>
+                    <li>
+                        <img src="imgs/seoul_s.jpg" alt="이미지">
+                        <div>서울교육청</div>
                     </li>
                 </ul>
             </div>
-            <ul class="portfolio__nav">
-                <li>
-                    <img src="imgs/purgio_s.jpg" alt="이미지">
-                    <div>푸르지오</div>
-                </li>
-                <li>
-                    <img src="imgs/twks_s.jpg" alt="이미지">
-                    <div>TWKS</div>
-                </li>
-                <li>
-                    <img src="imgs/converse_s.jpg" alt="이미지">
-                    <div>Converse</div>
-                </li>
-                <li>
-                    <img src="imgs/seoul_s.jpg" alt="이미지">
-                    <div>서울교육청</div>
-                </li>
-            </ul>
         </article>
     </main>
-    <footer>흠...</footer>
+    <footer>푸터를 할까 말까</footer>
 </body>
 </html>

@@ -6,7 +6,8 @@ html {
 body {
   font-family: '맑은고딕',sans-serif;
   font-size: 1.6rem;
-  background-color: #D8DDE1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .inner {
@@ -36,7 +37,7 @@ header.inner {
   max-width: 1800px;
 }
 
-nav ul {
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,17 +45,17 @@ nav ul {
   font-weight: 700;
 }
 
-nav ul li {
+.nav li {
   position: relative;
   padding-left: 40px;
-  color: #222;
+  color: #fff;
 }
 
-nav ul li:hover::after {
+.nav li:hover::after {
   width: 60px;
 }
 
-nav ul li::after {
+.nav li::after {
   display: block;
   content: '';
   position: absolute;
@@ -67,12 +68,17 @@ nav ul li::after {
   transition: 0.5s;
 }
 
-main {
-  position: relative;
+.nav li.ch-barbg {
+  color: #222;
+  text-shadow: 0 0 4px #fff;
 }
 
-article:not(:first-child) {
-  padding: 200px 0;
+.nav li.ch-barbg::after {
+  background-color: #222;
+}
+
+main {
+  position: relative;
 }
 
 .home {
@@ -106,6 +112,11 @@ article:not(:first-child) {
 
 .article__header {
   height: 100vh;
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+.article__header div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,11 +126,10 @@ article:not(:first-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 10rem;
-  font-weight: 700;
+  height: 100%;
 }
 
-.article__header h2 p {
+.article__header div h2 p {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   opacity: 0;
@@ -127,10 +137,24 @@ article:not(:first-child) {
   transition: 0.7s;
 }
 
-.article__header h2 p.up {
+.article__header div h2 p.up {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+
+.article__header.tit01 {
+  background: url("../imgs/bg-workplace01.jpg") center center/cover no-repeat;
+  margin-top: -5px;
+  color: #fff;
+}
+
+.article__header.tit02 {
+  background: url("../imgs/bg-workplace02.jpg") center center/cover no-repeat;
+}
+
+.about {
+  padding: 200px 0;
 }
 
 .about li {
@@ -149,6 +173,10 @@ article:not(:first-child) {
   width: 17%;
   position: relative;
   z-index: 50;
+}
+
+.about li .imgbox img {
+  width: 100%;
 }
 
 .about li .textbox {
@@ -191,9 +219,15 @@ article:not(:first-child) {
   width: 50%;
 }
 
+.portfolio {
+  padding: 200px 0;
+  background-color: #D8DDE1;
+}
+
 .portfolio .laptop {
-  width: 100%;
+  width: 80%;
   position: relative;
+  margin: 0 auto;
 }
 
 .portfolio .laptop > img {
@@ -223,8 +257,11 @@ article:not(:first-child) {
 .portfolio .laptop__change li .explan {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 45% 15%;
-      grid-template-columns: 40% 45% 15%;
+  -ms-grid-columns: 38% 42% 20%;
+      grid-template-columns: 38% 42% 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   background-color: rgba(0, 0, 0, 0.7);
@@ -234,17 +271,17 @@ article:not(:first-child) {
 
 .portfolio .laptop__change li .explan h3 {
   text-align: center;
-  font-size: 7.2rem;
+  font-size: 6rem;
   font-weight: 500;
 }
 
 .portfolio .laptop__change li .explan__box {
-  padding: 15px 40px;
+  padding: 15px 20px;
 }
 
 .portfolio .laptop__change li .explan__box p span:not(:first-child) {
   position: relative;
-  padding-left: 10px;
+  padding-left: 15px;
   margin-left: 10px;
 }
 
@@ -252,7 +289,7 @@ article:not(:first-child) {
   display: block;
   content: '';
   width: 2px;
-  height: 60%;
+  height: 15px;
   background-color: #fff;
   position: absolute;
   left: 0;
@@ -299,15 +336,14 @@ article:not(:first-child) {
 }
 
 .portfolio__nav {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 50px;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  margin: 10px auto;
 }
 
 .portfolio__nav li {
