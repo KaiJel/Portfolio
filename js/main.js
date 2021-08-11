@@ -10,32 +10,29 @@ $(function(){
     const converse = document.querySelector('.converse');
     const seouledu = document.querySelector('.seouledu');
 
-
     //nav 클릭 이동
     $('.nav li:nth-child(1)').click(function () {
-        let top1 = $('.home').offset().top;
+        let home = $('.home').offset().top;
         $('html, body').animate({
-            scrollTop: top1
+            scrollTop: home
         }, 800);
     });
     $('.nav li:nth-child(2)').click(function () {
-        let top1 = $('.about').offset().top;
+        let about = $('.about').offset().top;
         $('html, body').animate({
-            scrollTop: top1
+            scrollTop: about
         }, 800);
     });
     $('.nav li:nth-child(3)').click(function () {
-        let top1 = $('.portfolio').offset().top + 200;
+        let portfoilo = $('.portfolio').offset().top + 200;
         $('html, body').animate({
-            scrollTop: top1
+            scrollTop: portfoilo
         }, 800);
     });
     
     //scroll효과
     $(window).scroll( ()=> {
         sct = $(window).scrollTop();
-        console.log(sct);
-        
         sct >= 800
         ? upTitle01.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
         : upTitle01.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
@@ -61,6 +58,7 @@ $(function(){
             underLine[3].classList.add('line');
             upTextAbout[3].classList.add('up');
         }
+
         sct >= 3300
         ? upTitle02.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
         : upTitle02.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
@@ -73,12 +71,13 @@ $(function(){
 
         //반응형
         const media1599 = window.matchMedia( '(max-width:1599px)' );
-        if(media1599.matches = true) {
+        if(media1599.matches == true) {
             if (sct >= 700) {
                 upTitle01.forEach((p, i) =>
                   setTimeout(() => p.classList.add('up'), 100 * i)
                 );
             }
+
             sct >= 1800
             ? chBarColor.forEach((l, i) => l.classList.add('ch-barbg'))
             : chBarColor.forEach((l, i) => l.classList.remove('ch-barbg') );
@@ -91,7 +90,7 @@ $(function(){
         }
 
         const media1279 = window.matchMedia( '(max-width:1279px)' );
-        if(media1279.matches = true) {
+        if(media1279.matches == true) {
             sct >= 1900
             ? chBarColor.forEach((l, i) => l.classList.add('ch-barbg'))
             : chBarColor.forEach((l, i) => l.classList.remove('ch-barbg'));
@@ -104,8 +103,8 @@ $(function(){
         }
 
         const media1023 = window.matchMedia( '(max-width:1023px)' );
-        if(media1023.matches = true) {
-            if(sct >= 4200) {
+        if(media1023.matches == true) {
+            if(sct >= 4000) {
                 PortNav.forEach((p, i) =>
                 setTimeout(() => p.classList.add('up'), 100 * i)
                );
@@ -113,7 +112,7 @@ $(function(){
         }
 
         const media779 = window.matchMedia( '(max-width:779px)' );
-        if(media779.matches = true) {
+        if(media779.matches == true) {
             if (sct >= 1400) {
                 underLine[0].classList.add('line');
                 upTextAbout[0].classList.add('up');
@@ -131,19 +130,16 @@ $(function(){
                 upTextAbout[3].classList.add('up');
             }
 
-            sct >= 2900
+            sct >= 2500
             ? upTitle02.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
             : upTitle02.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
 
-            if (sct >= 3800) {
+            if (sct >= 3500) {
                 PortNav.forEach((p, i) =>
                  setTimeout(() => p.classList.add('up'), 100 * i)
                 );
             }
         }
-
-
-
     })
     //scroll 끝
 
@@ -198,7 +194,5 @@ $(function(){
         ? (target.innerHTML = target.innerHTML.slice(0, i), i--, setTimeout(remove, speed))
         : (type(), txtnum())
     }
-  
     type();
-    
 })
