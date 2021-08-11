@@ -238,7 +238,7 @@ main {
 }
 
 .portfolio {
-  padding: 200px 0;
+  padding: 100px 0;
   background-color: #D8DDE1;
 }
 
@@ -477,8 +477,6 @@ main {
   .home video {
     width: auto;
     height: 100%;
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
   }
 }
 
@@ -500,9 +498,6 @@ main {
   .about .underline.line {
     width: 57%;
   }
-  .portfolio {
-    padding: 100px 0;
-  }
   .portfolio__nav {
     margin: 50px auto 0;
     width: 80%;
@@ -521,6 +516,10 @@ main {
 
 /* 큰 모바일 */
 @media all and (max-width: 779px) {
+  .home video {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
   .article__header {
     font-size: 7rem;
   }

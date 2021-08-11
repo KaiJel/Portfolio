@@ -9,6 +9,8 @@ $(function(){
     const twks = document.querySelector('.twks');
     const converse = document.querySelector('.converse');
     const seouledu = document.querySelector('.seouledu');
+    let portHeight = document.querySelector('.portfolio').offsetHeight;
+    let portSct = document.querySelector('.portfolio').offsetTop;
 
     //nav 클릭 이동
     $('.nav li:nth-child(1)').click(function () {
@@ -25,6 +27,7 @@ $(function(){
     });
     $('.nav li:nth-child(3)').click(function () {
         let portfoilo = $('.portfolio').offset().top + 200;
+        console.log(portfoilo);
         $('html, body').animate({
             scrollTop: portfoilo
         }, 800);
@@ -33,19 +36,19 @@ $(function(){
     //scroll효과
     $(window).scroll( ()=> {
         sct = $(window).scrollTop();
+        console.log(sct);
         sct >= 800
         ? upTitle01.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
         : upTitle01.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
-
-        if (sct >= 1600) {
-            underLine[0].classList.add('line');
-            upTextAbout[0].classList.add('up');
-        }
 
         sct >= 2000
         ? chBarColor.forEach((l, i) => l.classList.add('ch-barbg'))
         : chBarColor.forEach((l, i) => l.classList.remove('ch-barbg'));
 
+        if (sct >= 1600) {
+            underLine[0].classList.add('line');
+            upTextAbout[0].classList.add('up');
+        }
         if (sct >= 1800) { 
             underLine[1].classList.add('line');
             upTextAbout[1].classList.add('up');
@@ -62,12 +65,12 @@ $(function(){
         sct >= 3300
         ? upTitle02.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
         : upTitle02.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
-
-        if (sct >= 4500) {
+        
+         if (sct >= `${portSct + portHeight / 2}`) {
             PortNav.forEach((p, i) =>
              setTimeout(() => p.classList.add('up'), 100 * i)
             );
-        }
+        }       
 
         //반응형
         const media1599 = window.matchMedia( '(max-width:1599px)' );
@@ -88,34 +91,20 @@ $(function(){
                 );
             }
         }
-        const media1370 = window.matchMedia( '(max-width:1370px)' );
-        if(media1370.matches == true) {
-            if(sct >= 3100) {
-                PortNav.forEach((p, i) =>
-                setTimeout(() => p.classList.add('up'), 100 * i)
-               );
-            }
-        }
 
         const media1279 = window.matchMedia( '(max-width:1279px)' );
         if(media1279.matches == true) {
             sct >= 1900
             ? chBarColor.forEach((l, i) => l.classList.add('ch-barbg'))
             : chBarColor.forEach((l, i) => l.classList.remove('ch-barbg'));
-
-            if(sct >= 4600) {
-                PortNav.forEach((p, i) =>
-                setTimeout(() => p.classList.add('up'), 100 * i)
-               );
-            }
         }
 
         const media1023 = window.matchMedia( '(max-width:1023px)' );
         if(media1023.matches == true) {
-            if(sct >= 4000) {
+            if (sct >= `${portSct + (portHeight * 0.2)}`) {
                 PortNav.forEach((p, i) =>
-                setTimeout(() => p.classList.add('up'), 100 * i)
-               );
+                 setTimeout(() => p.classList.add('up'), 100 * i)
+                );
             }
         }
 
@@ -142,10 +131,12 @@ $(function(){
             ? upTitle02.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
             : upTitle02.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
 
-            if (sct >= 3500) {
-                PortNav.forEach((p, i) =>
-                 setTimeout(() => p.classList.add('up'), 100 * i)
-                );
+            if(media1023.matches == true) {
+                if (sct >= `${portSct - portHeight}`) {
+                    PortNav.forEach((p, i) =>
+                     setTimeout(() => p.classList.add('up'), 100 * i)
+                    );
+                }
             }
         }
     })

@@ -153,7 +153,7 @@ main { position: relative;}
 }
 
 .portfolio {
-    padding: 200px 0;
+    padding: 100px 0;
     background-color: $bg-color-gray;
     .laptop {
         width: 80%;
@@ -289,7 +289,6 @@ main { position: relative;}
         overflow: hidden;
         video { 
             width: auto; height: 100%;
-            transform: translateX(-20%);
         }
     }
 }
@@ -310,7 +309,6 @@ main { position: relative;}
     .about { .underline { &.line { width: 57%;}}
     }
     .portfolio {
-        padding: 100px 0;
         &__nav {
             margin: 50px auto 0;
             width: 80%;
@@ -325,6 +323,9 @@ main { position: relative;}
 
 /* 큰 모바일 */
 @media all and (max-width:779px) {
+    .home {
+        video { transform: translateX(-20%); }
+    }
     .article__header {
         @include articleH2-font1024();
         &.tit01 { background: url("../imgs/bg-workplace01.jpg") 100%/cover no-repeat; }
