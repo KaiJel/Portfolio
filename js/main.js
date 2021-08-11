@@ -9,7 +9,6 @@ $(function(){
     const twks = document.querySelector('.twks');
     const converse = document.querySelector('.converse');
     const seouledu = document.querySelector('.seouledu');
-    let portHeight = document.querySelector('.portfolio').offsetHeight;
     let portSct = document.querySelector('.portfolio').offsetTop;
 
     //nav 클릭 이동
@@ -65,8 +64,8 @@ $(function(){
         sct >= 3300
         ? upTitle02.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
         : upTitle02.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
-        
-         if (sct >= `${portSct + portHeight / 2}`) {
+       
+        if (sct >= (portSct + 200)) {
             PortNav.forEach((p, i) =>
              setTimeout(() => p.classList.add('up'), 100 * i)
             );
@@ -101,11 +100,11 @@ $(function(){
 
         const media1023 = window.matchMedia( '(max-width:1023px)' );
         if(media1023.matches == true) {
-            if (sct >= `${portSct + (portHeight * 0.2)}`) {
+            if (sct >= portSct) {
                 PortNav.forEach((p, i) =>
                  setTimeout(() => p.classList.add('up'), 100 * i)
                 );
-            }
+            } 
         }
 
         const media779 = window.matchMedia( '(max-width:779px)' );
@@ -131,12 +130,11 @@ $(function(){
             ? upTitle02.forEach((p, i) => setTimeout(() => p.classList.add('up'), 100 * i))
             : upTitle02.forEach((p, i) => setTimeout(() => p.classList.remove('up'), 100 * i))
 
-            if(media1023.matches == true) {
-                if (sct >= `${portSct - portHeight}`) {
-                    PortNav.forEach((p, i) =>
-                     setTimeout(() => p.classList.add('up'), 100 * i)
-                    );
-                }
+            console.log((portSct - 300));
+            if (sct >= portSct - 300) {
+                PortNav.forEach((p, i) =>
+                 setTimeout(() => p.classList.add('up'), 100 * i)
+                );
             }
         }
     })
