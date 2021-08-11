@@ -88,6 +88,14 @@ $(function(){
                 );
             }
         }
+        const media1370 = window.matchMedia( '(max-width:1370px)' );
+        if(media1370.matches == true) {
+            if(sct >= 3100) {
+                PortNav.forEach((p, i) =>
+                setTimeout(() => p.classList.add('up'), 100 * i)
+               );
+            }
+        }
 
         const media1279 = window.matchMedia( '(max-width:1279px)' );
         if(media1279.matches == true) {
